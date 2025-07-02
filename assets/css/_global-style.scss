@@ -1,0 +1,331 @@
+@mixin mymedia($minwidth) {
+    @media (min-width: #{$minwidth}) {
+        @content;
+    }
+}
+
+@mixin unorder-list() {
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+
+
+
+
+@mixin blinking-dot {
+    .blinking-dot {
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        background-color: c.$primary; // You can change the color
+        border-radius: 50%;
+        animation: blink 1s infinite;
+        vertical-align: middle;
+        letter-spacing: 2px;
+    }
+
+    @keyframes blink {
+
+        0%,
+        100% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0;
+        }
+    }
+}
+
+@mixin small-headline {
+    padding: 6px 22px;
+    background-color: #fff;
+    border-radius: 30px;
+    color: #222;
+    display: inline-block;
+    font-size: 14px;
+}
+
+
+@mixin headline($pt, $pb, $color, $weight) {
+    font-size: 28px;
+    line-height: 34px;
+    font-weight: $weight;
+    padding-top: $pt;
+    padding-bottom: $pb;
+    color: $color;
+    text-transform: normal;
+
+    @include mymedia(700px) {
+        font-size: 40px;
+        line-height: 46px;
+        font-weight: $weight;
+        padding-top: $pt;
+        padding-bottom: $pb;
+        color: $color;
+        text-transform: normal;
+    }
+
+    @include mymedia(1200px) {
+        font-size: 65px;
+        line-height: 70px;
+        font-weight: $weight;
+        padding-top: $pt;
+        padding-bottom: $pb;
+        color: $color;
+        text-transform: normal;
+    }
+}
+
+@mixin para($color, $font-size, $weight) {
+    color: $color;
+    font-size: $font-size;
+    font-weight: $weight;
+}
+
+
+
+
+
+
+
+
+body {
+
+    font-size: 1rem;
+    font-family: f.$font-urbanist;
+    font-weight: f.$urbanist-regular;
+
+
+    @include mymedia(2000px) {
+        font-size: 1.3rem;
+    }
+}
+
+.container-fluid {
+    max-width: 1920px;
+}
+
+
+// Variables
+$white: #ffffff;
+$whatsapp-green: #25D366;
+$gradient: linear-gradient(135deg, #4a90e2, #007aff);
+
+// Animations
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+// Common Button Style
+.back-to-top,
+.whatsapp-btn {
+    position: fixed;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: $white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+
+
+// WhatsApp Button (Right)
+.whatsapp-btn {
+    bottom: 30px;
+    right: 30px;
+    background-color: $whatsapp-green;
+    animation: slideInRight 0.5s forwards;
+    text-decoration: none;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    i {
+        font-size: 1.4rem;
+        color: $white;
+    }
+}
+
+
+
+@mixin headline($mg) {
+    font-size: 25px;
+    line-height: 50px;
+    margin-bottom: $mg;
+    color: c.$defalut-text-color-headline;
+
+
+
+
+    @include mymedia(991px) {
+        font-size: 40px;
+        line-height: 45px;
+        margin-bottom: $mg;
+        color: c.$defalut-text-color-headline;
+
+
+
+    }
+
+    @include mymedia(1600px) {
+        font-size: 45px;
+        line-height: 50px;
+        margin-bottom: $mg;
+        color: c.$defalut-text-color-headline;
+
+    }
+}
+
+
+
+@mixin subheading {
+    border-radius: 0 15px 0 15px;
+    background-color: c.$defalut-text-color-headline;
+    padding: 3px 16px;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 12px;
+
+
+
+
+}
+
+
+@mixin p-tb {
+    padding: 30px 0;
+
+    @include mymedia(1099px) {
+        padding: 50px 0;
+    }
+
+    @include mymedia(1600px) {
+        padding: 80px 0;
+
+    }
+}
+
+.svg-play {
+    display: inline-block;
+    animation: spin 4s linear infinite;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+.global-btn1 {
+    position: relative;
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 16px;
+    color: c.$defalut-text-color-headline;
+    background: transparent;
+    border: 1px solid c.$defalut-text-color-headline;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    transition: color 0.3s ease;
+    border-radius: 30px;
+    text-decoration: none;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 0%;
+        background-color: c.$defalut-text-color-headline;
+        z-index: -1;
+        transition: height 0.4s ease;
+    }
+
+    &:hover {
+        color: #ffffff;
+
+        &::before {
+            height: 100%; // Animate from bottom to top
+        }
+    }
+}
+
+
+.global-btn2 {
+    position: relative;
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 16px;
+    color: #fff;
+    background: transparent;
+    border: 1px solid #fff;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    transition: color 0.3s ease;
+    border-radius: 30px;
+    text-decoration: none;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 0%;
+        background-color: c.$defalut-text-color-headline;
+        z-index: -1;
+        transition: height 0.4s ease;
+    }
+
+    &:hover {
+        color: #ffffff;
+
+        &::before {
+            height: 100%; // Animate from bottom to top
+        }
+    }
+}

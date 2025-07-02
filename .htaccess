@@ -1,0 +1,12 @@
+# Enable mod_rewrite
+RewriteEngine On
+
+# Redirect requests with .php to clean URLs (e.g., /about.php → /about)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^\ ]+)\.php\ HTTP/
+RewriteRule ^([^.]+)\.php$ /$1 [R=301,L]
+
+# Internally rewrite clean URLs to .php files (e.g., /about → /about.php)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php [L]
