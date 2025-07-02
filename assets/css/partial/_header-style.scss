@@ -142,6 +142,19 @@ header {
             padding: 20px;
             margin-left: 6rem;
 
+            @include mymedia (1440px) {
+                position: relative;
+                z-index: 2;
+                height: 100%;
+                max-width: 650px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: left;
+                padding: 20px;
+                margin-left: 4rem;
+            }
+
             .slide-title {
                 font-size: 3.4rem;
                 font-weight: 500;
