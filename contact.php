@@ -6,7 +6,7 @@
         <div class="subheadline ">
             <a href="#">Home - Contact</a>
         </div>
-        <h2>Let’s Collaborate on Modern <br> Interior Design Solutions</h2>
+        <h2>Got something to ask? We’re here <br> to  help —  just fill this out.</h2>
     </div>
 </section>
 
