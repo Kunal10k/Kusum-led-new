@@ -229,78 +229,65 @@
 
 
 <section class="retaling_product">
-    <div class="retailng_banner">
-        <img src="assets/img/bg-banner-v5.webp" alt="" class="img-fluid">
-    </div>
-    <div class="container">
-        <div class="collection-section">
-            <div class="product-header">
-                <div class="left">
-                    <p class="tagline">Retail Products</p>
-                    <h2>Perfect Lighting Solutions for <br> Every Retail Space</h2>
+    <div class="retailng_banner"></div>
+
+    <div class="collection-section">
+        <div class="product-header">
+            <div class="left">
+                <p class="tagline">Retail Products</p>
+                <h2>Perfect Lighting Solutions for <br> Every Retail Space</h2>
+            </div>
+        </div>
+
+        <div class="collection-grid owl-carousel owl-theme">
+            <div class="collection-card">
+                <img src="assets/img/track.jpg" alt="Track Lights" />
+                <div class="collection-info">
+                    <h3>Track Lights</h3>
+                    <p>Flexible spotlights to highlight displays and aisles.</p>
+                    <a href="#">Read More</a>
                 </div>
             </div>
 
-            <div class="collection-grid owl-carousel owl-theme">
-                <!-- Track Lights -->
-                <div class="collection-card">
-                    <img src="assets/img/track.jpg"
-                        alt="Track Lights" />
-                    <div class="collection-info">
-                        <h3>Track Lights</h3>
-                        <p>Flexible spotlights to highlight displays and aisles.</p>
-                        <a href="#">Read More</a>
-                    </div>
-                </div>
-
-                <!-- Recessed Lights -->
-                <div class="collection-card">
-                    <img src="assets/img/Recessed Lights.jpg"
-                        alt="Recessed Lights" />
-                    <div class="collection-info">
-                        <h3>Recessed Lights</h3>
-                        <p>Sleek ceiling lights for uniform ambient lighting.</p>
-                        <a href="#">Read More</a>
-                    </div>
-                </div>
-
-                <!-- Pendant Lights -->
-                <div class="collection-card">
-                    <img src="assets/img/Pendant Lights.webp"
-                        alt="Pendant Lights" />
-                    <div class="collection-info">
-                        <h3>Pendant Lights</h3>
-                        <p>Statement pieces for counters and feature areas.</p>
-                        <a href="#">Read More</a>
-                    </div>
-                </div>
-
-                <!-- Spotlights -->
-                <div class="collection-card">
-                    <img src="assets/img/Spotlights.jpg"
-                        alt="Spotlights" />
-                    <div class="collection-info">
-                        <h3>Spotlights</h3>
-                        <p>Focused beams for products and window displays.</p>
-                        <a href="#">Read More</a>
-                    </div>
-                </div>
-
-                <!-- Panel Lights -->
-                <div class="collection-card">
-                    <img src="assets/img/Panel Lights.jpg"
-                        alt="Panel Lights" />
-                    <div class="collection-info">
-                        <h3>Panel Lights</h3>
-                        <p>Bright, energy-efficient general lighting for large spaces.</p>
-                        <a href="#">Read More</a>
-                    </div>
+            <div class="collection-card">
+                <img src="assets/img/Recessed Lights.jpg" alt="Recessed Lights" />
+                <div class="collection-info">
+                    <h3>Recessed Lights</h3>
+                    <p>Sleek ceiling lights for uniform ambient lighting.</p>
+                    <a href="#">Read More</a>
                 </div>
             </div>
 
+            <div class="collection-card">
+                <img src="assets/img/Pendant Lights.webp" alt="Pendant Lights" />
+                <div class="collection-info">
+                    <h3>Pendant Lights</h3>
+                    <p>Statement pieces for counters and feature areas.</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+
+            <div class="collection-card">
+                <img src="assets/img/Spotlights.jpg" alt="Spotlights" />
+                <div class="collection-info">
+                    <h3>Spotlights</h3>
+                    <p>Focused beams for products and window displays.</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+
+            <div class="collection-card">
+                <img src="assets/img/Panel Lights.jpg" alt="Panel Lights" />
+                <div class="collection-info">
+                    <h3>Panel Lights</h3>
+                    <p>Bright, energy-efficient general lighting for large spaces.</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
+
 
 
 

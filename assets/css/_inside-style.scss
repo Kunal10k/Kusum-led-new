@@ -89,9 +89,8 @@
             }
 
             p {
-                font-size: 18px;
+                font-size: 16px;
                 line-height: 1.6;
-
                 color: c.$accent;
             }
 
@@ -107,9 +106,15 @@
                 border-radius: 12px;
                 display: block;
                 object-fit: cover;
-                height: 430px;
+                height: 490px;
             }
         }
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: c.$accent;
     }
 }
 
@@ -199,6 +204,16 @@
                     font-size: 18px;
                     color: c.$accent;
                     margin: 0 0 10px;
+                }
+
+                a {
+                    color: #000;
+
+                    &:hover {
+                        color: #614700;
+                        text-decoration: underline;
+                    }
+
                 }
             }
 
@@ -974,7 +989,7 @@
             font-weight: 600;
 
             span {
-                color: #36abff;
+                color: #b19777;
             }
 
         }
@@ -1058,6 +1073,8 @@
 
 
 .about-tabs-section {
+    @include p-tb();
+    padding-bottom: 0 !important;
 
     .tabs-section {
 
@@ -1072,22 +1089,45 @@
             border: none;
             // background-color: rgba(250, 235, 215, 0.26);
             padding: 0 3px;
-            border-radius: 30px;
+            border-radius: 10px;
+
 
 
             .nav-link {
+                position: relative;
+                display: inline-block;
                 color: #000;
                 font-weight: 500;
-                border-radius: 30px;
+                border-radius: 10px;
 
+                background-color: #d9d9d9;
+                overflow: hidden;
+                z-index: 1;
+                transition: color 0.3s ease;
+                padding: 7px 22px;
 
-                &.active {
-                    background-color: c.$defalut-text-color-headline;
-                    color: #fff !important;
-
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    height: 0%;
+                    width: 100%;
+                    background-color: #000;
+                    z-index: -1;
+                    transition: height 0.3s ease;
 
                 }
+
+                &.active {
+                    color: #fff !important;
+
+                    &::before {
+                        height: 100%;
+                    }
+                }
             }
+
         }
 
         .tab-content {
@@ -1231,7 +1271,8 @@
 
 
 .timeline-section {
-    padding: 60px 0 20px 0;
+    @include p-tb();
+    padding-bottom: 0 !important;
 
     .container {
         max-width: 1200px;
@@ -1251,11 +1292,8 @@
             flex: 1 1 45%;
 
             .tagline {
-                color: c.$defalut-text-color-headline;
-                font-weight: 600;
-                text-transform: uppercase;
-                margin-bottom: 10px;
-                font-size: 0.9rem;
+                @include subheading();
+
             }
 
             h2 {
@@ -1318,10 +1356,11 @@
             display: none;
             flex-wrap: wrap;
             gap: 40px;
-        
+
 
             &.active {
                 display: flex;
+                align-items: center;
             }
 
             .images {
@@ -1347,11 +1386,38 @@
                 h3 {
                     font-size: 1.8rem;
                     margin-bottom: 20px;
+                    font-weight: 600
                 }
 
-                p {
-                    color: #444;
-                    line-height: 1.6;
+                ul {
+                    @include unorder-list();
+
+                    li {
+                        font-size: 16px;
+                        line-height: 1.6;
+                        color: #333;
+                        margin-bottom: 10px;
+
+                        i {
+                            color: #b19777;
+                            margin-right: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.team_modal {
+    .modal-dialog {
+        .modal-content {
+            .modal-body {
+                img {
+                    height: 177px;
+                    border-radius: 50%;
                 }
             }
         }
