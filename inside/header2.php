@@ -59,37 +59,37 @@
 
 
 
-<!-- HEADER -->
-<header>
-    <div class="container">
-        <div class="flex_items">
-            <div class="logo">
-                <a href="index">
-                    <img src="assets/img/logo.png" alt="" width="100">
-                </a>
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <div class="flex_items">
+                <div class="logo">
+                    <a href="index">
+                        <img src="assets/img/logo.png" alt="" width="100">
+                    </a>
+                </div>
+                <div class="menu-toggle2" id="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
-            <div class="menu-toggle" id="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+
         </div>
+    </header>
 
+    <!-- OVERLAY MENU -->
+    <div class="overlay-menu" id="overlayMenu">
+        <div class="overlay-close" id="menuClose">&times;</div>
+        <a href="index">Home</a>
+        <a href="about">About</a>
+        <a href="shop-by-category">shop by category</a>
+        <a href="#">brands</a>
+        <a href="b2b">B2B </a>
+        <a href="Bestsellers">Bestsellers </a>
+        <a href="news-&-media">News & Media</a>
+        <a href="contact">contact</a>
     </div>
-</header>
-
-<!-- OVERLAY MENU -->
-<div class="overlay-menu" id="overlayMenu">
-    <div class="overlay-close" id="menuClose">&times;</div>
-    <a href="index">Home</a>
-    <a href="about">About</a>
-    <a href="shop-by-category">shop by category</a>
-    <a href="#">brands</a>
-    <a href="b2b">B2B </a>
-    <a href="Bestsellers">Bestsellers </a>
-    <a href="news-&-media">News & Media</a>
-    <a href="contact">contact</a>
-</div>
 
 
 

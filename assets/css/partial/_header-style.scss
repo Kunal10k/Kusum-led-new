@@ -60,6 +60,34 @@ header {
     }
 }
 
+.menu-toggle2 {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1101;
+
+    span {
+        width: 25px;
+        height: 2px;
+        background: #000000;
+    }
+}
+
+.scrolled .menu-toggle2 {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1101;
+
+    span {
+        width: 25px;
+        height: 2px;
+        background: #ffffff;
+    }
+}
+
 // OVERLAY MENU
 .overlay-menu {
     position: fixed;

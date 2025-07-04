@@ -1,3 +1,7 @@
+
+  AOS.init();
+
+
 document.addEventListener("DOMContentLoaded", () => {
     // ===========================
     // 1. Hero Autoplay Slider
@@ -502,4 +506,115 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+});
+
+
+
+const stats = document.querySelectorAll('.stat-count');
+const speed = 200;
+
+stats.forEach(stat => {
+    const updateCount = () => {
+        const target = +stat.getAttribute('data-target');
+        const current = +stat.innerText;
+        const increment = Math.ceil(target / speed);
+
+        if (current < target) {
+            stat.innerText = current + increment;
+            setTimeout(updateCount, 10);
+        } else {
+            stat.innerText = target;
+        }
+    };
+
+    updateCount();
+});
+
+
+
+const wrapper = document.getElementById("logoWrapper");
+const track = document.getElementById("logoTrack");
+
+function cloneUntilFilled() {
+    const wrapperWidth = wrapper.offsetWidth;
+    let trackWidth = track.scrollWidth;
+
+    const items = Array.from(track.children);
+    let i = 0;
+
+    while (trackWidth < wrapperWidth * 2) {
+        const clone = items[i % items.length].cloneNode(true);
+        track.appendChild(clone);
+        i++;
+        trackWidth = track.scrollWidth;
+    }
+}
+
+window.addEventListener("load", cloneUntilFilled);
+window.addEventListener("resize", () => {
+    // Optional: reset and refill on resize if needed
+    const clones = Array.from(track.children).slice(track.children.length / 2);
+    clones.forEach(el => el.remove());
+    cloneUntilFilled();
+});
+
+
+
+
+$(document).ready(function () {
+    $(".collection-grid").owlCarousel({
+        loop: true,
+        margin: 30,
+        nav: false,
+        dots: false,
+        autoplay: true,
+        autoplayTimeout: 4000,
+        smartSpeed: 700,
+        navText: [
+            '<i class="fa fa-chevron-left"></i>',
+            '<i class="fa fa-chevron-right"></i>'
+        ],
+        responsive: {
+            0: {
+                items: 1
+            },
+            576: {
+                items: 2
+            },
+            992: {
+                items: 3
+            }
+        }
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const tabs = document.querySelectorAll(".year-tab");
+const contents = document.querySelectorAll(".timeline-content");
+
+tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+        const year = tab.getAttribute("data-year");
+
+        tabs.forEach(t => t.classList.remove("active"));
+        contents.forEach(c => c.classList.remove("active"));
+
+        tab.classList.add("active");
+        document
+            .querySelector(`.timeline-content[data-content="${year}"]`)
+            .classList.add("active");
+    });
 });

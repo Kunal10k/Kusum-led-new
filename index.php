@@ -1,36 +1,5 @@
 <?php include 'inside/header.php'; ?>
 
-<!-- HEADER -->
-<header>
-    <div class="container">
-        <div class="flex_items">
-            <div class="logo">
-                <a href="#">
-                    <img src="assets/img/logo.png" alt="" width="100">
-                </a>
-            </div>
-            <div class="menu-toggle" id="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-
-    </div>
-</header>
-
-<!-- OVERLAY MENU -->
-<div class="overlay-menu" id="overlayMenu">
-    <div class="overlay-close" id="menuClose">&times;</div>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">shop by category</a>
-    <a href="#">brands</a>
-    <a href="#">B2B </a>
-    <a href="#">Bestsellers </a>
-    <a href="#">News & Media</a>
-    <a href="#">contact</a>
-</div>
 
 
 
@@ -259,6 +228,82 @@
 
 
 
+<section class="retaling_product">
+    <div class="retailng_banner">
+        <img src="assets/img/bg-banner-v5.webp" alt="" class="img-fluid">
+    </div>
+    <div class="container">
+        <div class="collection-section">
+            <div class="product-header">
+                <div class="left">
+                    <p class="tagline">Retail Products</p>
+                    <h2>Perfect Lighting Solutions for <br> Every Retail Space</h2>
+                </div>
+            </div>
+
+            <div class="collection-grid owl-carousel owl-theme">
+                <!-- Track Lights -->
+                <div class="collection-card">
+                    <img src="assets/img/track.jpg"
+                        alt="Track Lights" />
+                    <div class="collection-info">
+                        <h3>Track Lights</h3>
+                        <p>Flexible spotlights to highlight displays and aisles.</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+
+                <!-- Recessed Lights -->
+                <div class="collection-card">
+                    <img src="assets/img/Recessed Lights.jpg"
+                        alt="Recessed Lights" />
+                    <div class="collection-info">
+                        <h3>Recessed Lights</h3>
+                        <p>Sleek ceiling lights for uniform ambient lighting.</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+
+                <!-- Pendant Lights -->
+                <div class="collection-card">
+                    <img src="assets/img/Pendant Lights.webp"
+                        alt="Pendant Lights" />
+                    <div class="collection-info">
+                        <h3>Pendant Lights</h3>
+                        <p>Statement pieces for counters and feature areas.</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+
+                <!-- Spotlights -->
+                <div class="collection-card">
+                    <img src="assets/img/Spotlights.jpg"
+                        alt="Spotlights" />
+                    <div class="collection-info">
+                        <h3>Spotlights</h3>
+                        <p>Focused beams for products and window displays.</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+
+                <!-- Panel Lights -->
+                <div class="collection-card">
+                    <img src="assets/img/Panel Lights.jpg"
+                        alt="Panel Lights" />
+                    <div class="collection-info">
+                        <h3>Panel Lights</h3>
+                        <p>Bright, energy-efficient general lighting for large spaces.</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
 
 
 
@@ -307,7 +352,16 @@
         </div>
     </div>
 </section> -->
-
+<section class="banner" style="background-image: url(./assets/img/v1.jpg);">
+    <div class="banner__overlay">
+        <div class="banner__content">
+            <h1 class="banner__heading">
+                Got a Query? <br> We’re Always Ready to Help
+            </h1>
+            <a href="#" class="banner__btn">Get In Touch →</a>
+        </div>
+    </div>
+</section>
 
 <section class="product-section">
     <div class="container">
@@ -632,16 +686,7 @@
 
 
 
-<section class="banner" style="background-image: url(./assets/img/v1.jpg);">
-    <div class="banner__overlay">
-        <div class="banner__content">
-            <h1 class="banner__heading">
-                Got a Query? <br> We’re Always Ready to Help
-            </h1>
-            <a href="#" class="banner__btn">Get In Touch →</a>
-        </div>
-    </div>
-</section>
+
 
 
 <?php include 'inside/footer.php'; ?>

@@ -1,4 +1,4 @@
-<?php include 'inside/header.php'; ?>
+<?php include 'inside/header2.php'; ?>
 
 
 <section class="inner_Section">
@@ -22,22 +22,22 @@
                 <form>
                     <div class="form-group">
                         <label for="full-name">Full Name*</label>
-                        <input type="text" id="full-name" value="Liam Anderson" class="form-control">
+                        <input type="text" id="full-name"  class="form-control">
                     </div>
 
                     <div class="form-group">
                         <label for="phone">Phone Number*</label>
-                        <input type="tel" id="phone" value="(22) 555-7880" class="form-control">
+                        <input type="tel" id="phone"  class="form-control">
                     </div>
 
                     <div class="form-group">
                         <label for="email">Your Email*</label>
-                        <input type="email" id="email" value="info@intoria.com" class="form-control">
+                        <input type="email" id="email"  class="form-control">
                     </div>
 
                     <div class="form-group">
                         <label for="subject">Subject*</label>
-                        <input type="text" id="subject" value="Luxury Interior Design" class="form-control">
+                        <input type="text" id="subject"  class="form-control">
                     </div>
 
                     <div class="form-group">
@@ -67,7 +67,7 @@
                     <div class="details">
                         <label class="fw-semibold d-block mb-1">Email</label>
                         <a href="mailto:intorio@example.com" class="text-decoration-none text-dark">
-                            intorio@example.com
+                           info@kusumledlights.com
                         </a>
                     </div>
                 </div>
@@ -81,8 +81,10 @@
                     </div>
                     <div class="details">
                         <label class="fw-semibold d-block mb-1">Phone</label>
-                        <a href="tel:+919999999999" class="text-decoration-none text-dark">
-                            +91 99999 99999
+                        <a href="tel:+91 9830223913" class="text-decoration-none text-dark">
+                            +91 98302 23913
+
+
                         </a>
                     </div>
                 </div>
@@ -96,7 +98,7 @@
                     </div>
                     <div class="details">
                         <label class="fw-semibold d-block mb-1">Address</label>
-                        <div>123, MG Road, Bengaluru, India</div>
+                        <div>18, Parsee Church Street, Kolkata, West Bengal, India</div>
                     </div>
                 </div>
             </div>
